@@ -1,14 +1,14 @@
 // personaliza o status bar, para que a imagem no carregamento pegue a tela inteira
 import { View, Image, StatusBar } from "react-native";
 import { Link } from "expo-router";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { FontAwesome6, MaterialIcons } from "@expo/vector-icons";
 
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 
 import colors from "tailwindcss/colors";
 
-export default function Home() {
+export default function register() {
   return (
     <View className="flex-1 justify-center items-center bg-green-500 p-8">
       <StatusBar barStyle={"light-content"} />
@@ -20,20 +20,29 @@ export default function Home() {
 
       <View className="w-full mt-12 gap-3">
         <Input>
-          <MaterialCommunityIcons
-            name="ticket-confirmation-outline"
+          <FontAwesome6
+            name="user-circle"
+            size={20}
+            color={colors.green[200]}           
+          />
+          <Input.Field placeholder="Nome completo" />
+          
+        </Input>
+        <Input>
+          <MaterialIcons
+            name="alternate-email"
             size={20}
             color={colors.green[200]}
           />
-          <Input.Field placeholder="Código do ingresso" />
+          <Input.Field placeholder="E-mail" keyboardType="email-address" />
         </Input>
 
-        <Button title="Acessar a credencial" />
+        <Button title="Realizar inscrição" />
         <Link
-          href="/register"
+          href={"/"}
           className="text-gray-100 text-base font-bold text-center mt-8"
         >
-          Ainda não possui registro?
+          Já possui registro?
         </Link>
       </View>
     </View>
