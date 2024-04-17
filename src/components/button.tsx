@@ -1,21 +1,17 @@
-import {
-  Text,
-  TouchableOpacity,
-  TouchableOpacityProps,
-  ActivityIndicator,
-} from "react-native";
+import { StyleSheet } from "nativewind";
+import { TouchableOpacity, Text, ActivityIndicator , TouchableOpacityProps} from "react-native";
 
 type Props = TouchableOpacityProps & {
   title: string;
   isLoading?: boolean;
 };
 
-export function Button({ title, isLoading = false, ...rest }: Props) {
+export function Button({ title, isLoading = false, ...rest}: Props) {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
       disabled={isLoading}
-      className="w-full h-14 bg-orange-500 items-center justify-center rounded-lg"
+      style={styles.button}
       {...rest}
     >
       {isLoading ? (
@@ -27,4 +23,15 @@ export function Button({ title, isLoading = false, ...rest }: Props) {
       )}
     </TouchableOpacity>
   );
+  
 }
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: "#F48F56",
+    height: 50, // Ajuste a altura conforme necessário
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 10,
+  },
+});
