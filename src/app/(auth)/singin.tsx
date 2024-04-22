@@ -9,7 +9,7 @@ import { Button } from "@/components/button";
 
 import colors from "tailwindcss/colors";
 
-export default function Home() {
+export default function Singin() {
   const [code, setCode] = useState("")
  
   //criar uma função

@@ -8,7 +8,7 @@ import { Button } from "@/components/button";
 
 import colors from "tailwindcss/colors";
 
-export default function register() {
+export default function Register() {
   return (
     <View className="flex-1 justify-center items-center bg-green-500 p-8">
       <StatusBar barStyle={"light-content"} />
@@ -39,7 +39,7 @@ export default function register() {
 
         <Button title="Realizar inscrição" />
         <Link
-          href={"/"}
+          href={"/singin"}
           className="text-gray-100 text-base font-bold text-center mt-8"
         >
           Já possui registro?

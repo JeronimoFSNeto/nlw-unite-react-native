@@ -24,7 +24,7 @@ export default function Layout() {
   // return <Slot />;
   return (
     <Stack>
-      <Stack.Screen name="index" options={{ headerShown: true }} />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
       
     </Stack>
   );
